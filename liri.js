@@ -43,12 +43,21 @@ switch (userCommand) {
             if (!error && response.statusCode === 200) {
                 //Parse the json response
                 var data = JSON.parse(body);
-                for(var i = 0; i < data.length; i++){
+                //Loop through array
+                for (var i = 0; i < data.length; i++) {
+                    //Get venue name
                     console.log("Venue: " + data[i].venue.name);
-                    if(data[i].venue.region == ""){
-                        data[i].venue.region = data[i].venue.country;
+                    //Get venue location
+                    //If statement for concerts without a region
+                    if (data[i].venue.region == "") {
+                        console.log("Location: " + data[i].venue.city + ", " + data[i].venue.country);
+                    } else {
+                        console.log("Location: " + data[i].venue.city + ", " + data[i].venue.region + ", " + data[i].venue.country);
                     }
-                    console.log("Location: " + data[i].venue.city + ", " + data[i].venue.region);
+                    //Get date of show
+                    var date = data[i].datetime;
+                    date = moment(date).format("MM/DD/YYYY");
+                    console.log("Date: " + date)
                     console.log("----------------")
                 }
             }
