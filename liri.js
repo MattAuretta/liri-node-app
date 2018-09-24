@@ -96,7 +96,7 @@ function runLiri() {
             })
             break;
         case "movie-this":
-            //Run request to bandsintown with the specified artist
+            //Run request to OMDB
             var queryURL = "https://www.omdbapi.com/?t=" + userInput + "&y=&plot=short&apikey=trilogy"
             request(queryURL, function (error, response, body) {
                 if (!error && response.statusCode === 200) {
@@ -112,9 +112,6 @@ function runLiri() {
                 }
             });
             break;
-        // case "do-what-it-says":
-
-        //     break;
     }
 }
 
