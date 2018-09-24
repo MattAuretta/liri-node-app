@@ -91,7 +91,21 @@ switch (userCommand) {
         })
         break;
     case "movie-this":
-        console.log("movie-this");
+         //Run request to bandsintown with the specified artist
+        var queryURL = "https://www.omdbapi.com/?t=" + userInput + "&y=&plot=short&apikey=trilogy"
+        request(queryURL, function (error, response, body) {
+             if (!error && response.statusCode === 200) {
+                 var info = JSON.parse(body);
+                 console.log("Title: " + info.Title)
+                 console.log("Release Year: " + info.Year)
+                 console.log("IMDB Rating: " + info.Ratings[0].Value)
+                 console.log("Rotten Tomatoes Rating: " + info.Ratings[1].Value)
+                 console.log("Country: " + info.Country)
+                 console.log("Language: " + info.Language)
+                 console.log("Plot: " + info.Plot)
+                 console.log("Actors: " + info.Actors)
+             }
+        });
         break;
     case "do-what-it-says":
         console.log("do-what-it-says");
