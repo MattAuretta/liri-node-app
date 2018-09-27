@@ -1,0 +1,33 @@
+
+----------------
+Title: Pulp Fiction
+Release Year: 1994
+IMDB Rating: 8.9/10
+Rotten Tomatoes Rating: 94%
+Country: USA
+Language: English, Spanish, French
+Plot: The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption.
+Actors: Tim Roth, Amanda Plummer, Laura Lovelace, John Travolta
+----------------
+Planet Terror
+----------------
+Title: Planet Terror
+Release Year: 2007
+IMDB Rating: 7.1/10
+Rotten Tomatoes Rating: 74%
+Country: USA
+Language: English
+Plot: After an experimental bio-weapon is released, turning thousands into zombie-like creatures, it's up to a rag-tag group of survivors to stop the infected and those behind its release.
+Actors: Rose McGowan, Freddy Rodríguez, Josh Brolin, Marley Shelton
+----------------
+Machete
+----------------
+Title: Machete
+Release Year: 2010
+IMDB Rating: 6.6/10
+Rotten Tomatoes Rating: 71%
+Country: USA
+Language: English, Spanish, Hungarian
+Plot: After being set-up and betrayed by the man who hired him to assassinate a Texas Senator, an ex-Federale launches a brutal rampage of revenge against his former boss.
+Actors: Danny Trejo, Robert De Niro, Jessica Alba, Steven Seagal
+----------------
