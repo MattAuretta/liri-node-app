@@ -16,4 +16,4 @@ All results are returned in the command line, but also into a separate text file
 
 Technologies used: Javascript, Node.js, Moment.js, Bandsintown API, Spotify API, OMDb API
 
-<img src="./liri-demo.gif">
+<img src="./liri_demo.gif">
