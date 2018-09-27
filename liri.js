@@ -34,8 +34,9 @@ for (var i = 3; i < nodeArgs.length; i++) {
         userInput += nodeArgs[i];
     }
 }
+
+//Remove %20 when pushing to log.txt
 for (var i = 3; i < nodeArgs.length; i++) {
-    //Create variable to remove %20 from userInput
     prettyUserInput = userInput.replace(/%20/g, " ");
 }
 
@@ -102,6 +103,11 @@ function runLiri() {
             });
             break;
         case "spotify-this-song":
+            //If statement for no song provided
+            if (!userInput) {
+                userInput = "The%20Sign";
+                prettyUserInput = userInput.replace(/%20/g, " ");
+            }
             //Append userInput to log.txt
             fs.appendFileSync("log.txt", prettyUserInput + "\n----------------\n", function (error) {
                 if (error) {
@@ -144,6 +150,11 @@ function runLiri() {
             })
             break;
         case "movie-this":
+            //If statement for no movie provided
+            if (!userInput) {
+                userInput = "Mr%20Nobody";
+                prettyUserInput = userInput.replace(/%20/g, " ");
+            }
             //Append userInput to log.txt
             fs.appendFileSync("log.txt", prettyUserInput + "\n----------------\n", function (error) {
                 if (error) {
@@ -179,18 +190,16 @@ function runLiri() {
 
 if (userCommand == "do-what-it-says") {
     var fs = require("fs");
+    //Read random.txt file
     fs.readFile("random.txt", "utf8", function (error, data) {
         if (error) {
             return console.log(error)
         }
+        //Split data into array
         var textArr = data.split(",");
-        userCommand = textArr[0]
-        userInput = textArr[1]
-        fs.appendFileSync("log.txt", prettyUserInput + "\n----------------\n", function (error) {
-            if (error) {
-                console.log(error);
-            };
-        });
+        userCommand = textArr[0];
+        userInput = textArr[1];
+        prettyUserInput = userInput.replace(/%20/g, " ");
         runLiri();
     })
 }
